@@ -4,12 +4,15 @@ import { ThemeProvider } from "styled-components";
 import Routes from "./Routes";
 import "./theme.scss";
 import theme from "./export.module.scss";
-import "./services/firebase";
+import "./services/firebase/config";
+import AuthProvider from "./contexts/authContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
