@@ -64,7 +64,7 @@ const Navigation = () => {
               ))}
 
           {authContext.auth && (
-            <span className="button is-secondary" handleClick={() => signOut()}>
+            <span className="button is-secondary" onClick={() => signOut()}>
               Atsijungti
             </span>
           )}
